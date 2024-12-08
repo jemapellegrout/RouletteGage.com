@@ -10,7 +10,7 @@ const width = canvas.width;
 const height = canvas.height;
 const centerX = width / 2;
 const centerY = height / 2;
-const radius = width / 2-10;
+const radius = width / 2;
 let players = []; // Liste des joueurs
 let colors = []; // Conserver les couleurs pour chaque joueur
 let spinning = false;
@@ -57,7 +57,7 @@ function drawWheel() {
         ctx.rotate(toRad((startDeg + endDeg) / 2));
         ctx.textAlign = "center";
         ctx.fillStyle = "#fff";
-        ctx.font = `${Math.max(12, radius / 10)}px sans-serif`; // Taille adaptative pour le texte
+        ctx.font = "bold 18px sans-serif";
         ctx.fillText(player, radius - 50, 10);
         ctx.restore();
     });
@@ -189,17 +189,6 @@ function showAlert() {
     
     
 }
-
-
-function resizeCanvas() {
-    const maxWidth = Math.min(window.innerWidth, window.innerHeight) - 20; // Limite la largeur à celle de l'écran avec une marge
-    canvas.width = maxWidth;
-    canvas.height = maxWidth;
-    drawWheel(); // Redessine la roue après redimensionnement
-}
-
-window.addEventListener("resize", resizeCanvas); // Adapte la taille lorsque la fenêtre est redimensionnée
-resizeCanvas(); // Appelle une première fois pour adapter la taille dès le chargement
 
 // Ouvrir/fermer la modale de paramètres
 settingsButton.onclick = () => settingsModal.style.display = "flex";
