@@ -191,6 +191,26 @@ function showAlert() {
     
 }
 
+//responsive sur tél
+function resizeCanvas() {
+    const maxWidth = Math.min(window.innerWidth, window.innerHeight) - 20; // Limite la largeur à celle de l'écran avec une marge
+    canvas.width = maxWidth;
+    canvas.height = maxWidth;
+    drawWheel(); // Redessine la roue après redimensionnement
+}
+
+window.addEventListener("resize", resizeCanvas); // Adapte la taille lorsque la fenêtre est redimensionnée
+resizeCanvas(); // Appelle une première fois pour adapter la taille dès le chargement
+function resizeCanvas() {
+    const maxWidth = Math.min(window.innerWidth, window.innerHeight) - 20; // Limite la largeur à celle de l'écran avec une marge
+    canvas.width = maxWidth;
+    canvas.height = maxWidth;
+    drawWheel(); // Redessine la roue après redimensionnement
+}
+
+window.addEventListener("resize", resizeCanvas); // Adapte la taille lorsque la fenêtre est redimensionnée
+resizeCanvas(); // Appelle une première fois pour adapter la taille dès le chargement
+
 // Ouvrir/fermer la modale de paramètres
 settingsButton.onclick = () => settingsModal.style.display = "flex";
 saveSettings.onclick = () => {
