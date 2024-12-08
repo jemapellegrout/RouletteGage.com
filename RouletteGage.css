@@ -46,7 +46,12 @@ body {
 .wheel{
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
+    width: 90vw; /* La largeur de la roue sera de 90% de la largeur de l'écran */
+    height: 90vw; /* La hauteur sera proportionnelle pour garder un cercle parfait */
+    max-width: 500px; /* Taille maximale pour les grands écrans */
+    max-height: 500px;
 }
 .center-circle{
     width: 100px;
