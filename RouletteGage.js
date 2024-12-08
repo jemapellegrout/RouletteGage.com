@@ -58,7 +58,7 @@ function drawWheel() {
         ctx.rotate(toRad((startDeg + endDeg) / 2));
         ctx.textAlign = "center";
         ctx.fillStyle = "#fff";
-        ctx.font = "bold 18px sans-serif";
+        ctx.font = `${Math.max(12, radius / 10)}px sans-serif`; // Taille adaptative pour le texte
         ctx.fillText(player, radius - 50, 10);
         ctx.restore();
     });
