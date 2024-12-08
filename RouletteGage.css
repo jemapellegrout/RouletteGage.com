@@ -9,6 +9,12 @@ body {
     height: 100vh;
 }
 
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto; /* Permet une redimensionnement proportionnel */
+}
+
 .header{
     padding: 20px;
     display: flex;
