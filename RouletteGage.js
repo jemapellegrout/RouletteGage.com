@@ -10,7 +10,7 @@ const width = canvas.width;
 const height = canvas.height;
 const centerX = width / 2;
 const centerY = height / 2;
-const radius = width / 2;
+const radius = width / 2 - 10; //Cela garantit que la roue occupe tout le canvas sans déborder.
 
 let players = []; // Liste des joueurs
 let colors = []; // Conserver les couleurs pour chaque joueur
