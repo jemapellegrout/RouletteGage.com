@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette de Gages</title>
+    <link rel="stylesheet" href="RouletteGage.css">
+</head>
+<body>
+    <div class="wheel">
+        <canvas class="" id="canvas" width="500" height="500"></canvas>
+        <div class="center-circle" onclick="spin()">
+            <div class="triangle"></div>
+        </div>
+        
+    </div>
+    <div class="inputArea" onchange="createWheel()"></div>
+    <div class="message" id="message"></div>
+    <button id="settingsButton">Paramètres</button> <!-- Bouton pour les paramètres des gages -->
+
+    <div class="controls">
+        <input type="text" id="playerNameInput" placeholder="Nom du joueur">
+        <button id="addPlayerButton">Ajouter</button>
+    </div>
+    
+    <ul id="playerList"></ul> <!-- Liste des joueurs ajoutés -->
+    <div class="message" id="message"></div>
+    
+    
+    
+    <!-- Modale pour les paramètres -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h2>Paramètres des Gages</h2>
+            <textarea id="gagesInput" placeholder="Séparez les gages par des virgules. Utilisez [joueur] pour inclure un joueur au hasard."></textarea>
+            <button id="saveSettings">Enregistrer les Gages</button>
+        </div>
+    </div>
+
+    <script src="RouletteGage.js"></script>
+</body>
+</html>
