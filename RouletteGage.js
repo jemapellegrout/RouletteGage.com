@@ -10,7 +10,7 @@ const width = canvas.width;
 const height = canvas.height;
 const centerX = width / 2;
 const centerY = height / 2;
-const radius = width / 2;
+const radius = width / 2-10;
 let players = []; // Liste des joueurs
 let colors = []; // Conserver les couleurs pour chaque joueur
 let spinning = false;
@@ -190,16 +190,7 @@ function showAlert() {
     
 }
 
-//responsive sur tél
-function resizeCanvas() {
-    const maxWidth = Math.min(window.innerWidth, window.innerHeight) - 20; // Limite la largeur à celle de l'écran avec une marge
-    canvas.width = maxWidth;
-    canvas.height = maxWidth;
-    drawWheel(); // Redessine la roue après redimensionnement
-}
 
-window.addEventListener("resize", resizeCanvas); // Adapte la taille lorsque la fenêtre est redimensionnée
-resizeCanvas(); // Appelle une première fois pour adapter la taille dès le chargement
 function resizeCanvas() {
     const maxWidth = Math.min(window.innerWidth, window.innerHeight) - 20; // Limite la largeur à celle de l'écran avec une marge
     canvas.width = maxWidth;
