@@ -2,17 +2,7 @@ body {
     background-color: #333;
     color: #fff;
     font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-canvas {
-    display: block;
-    max-width: 100%;
-    height: auto; /* Permet une redimensionnement proportionnel */
+    
 }
 
 .header{
